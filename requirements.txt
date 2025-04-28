@@ -1,0 +1,7 @@
+streamlit
+PyMuPDF
+scikit-learn
+transformers
+torch
+sentencepiece
+tf-idf

@@ -1,0 +1,7 @@
+1) https://www.researchgate.net/publication/374605472_Implementation_of_Keyword_Extraction_using_Term_Frequency-Inverse_Document_Frequency_TF-IDF_in_Python
+---------By Ahmad Farhan Alshammari
+Research Paper Name: Implementation of Keyword Extraction using Term Frequency-Inverse Document Frequency (TF-IDF) in Python
+
+
+2) Understanding what is TF-IDF with a plain example:
+https://medium.com/nlplanet/two-minutes-nlp-learn-tf-idf-with-easy-examples-7c15957b4cb3

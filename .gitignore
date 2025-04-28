@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+temp_uploaded.pdf
+.DS_Store
+.idea/
+.vscode/
+*.log
