@@ -3,8 +3,8 @@ import fitz  # PyMuPDF
 def fallback_extract_headings(pdf_path):
     doc = fitz.open(pdf_path)
 
-    heading_font_size_threshold = 13  # You can fine-tune this
-    toc_page_skip = 2  # Skip first 2 pages assuming ToC is there
+    heading_font_size_threshold = 13  
+    toc_page_skip = 2  # Skip first 2 pages 
 
     sections = {}
     last_heading = "Start"

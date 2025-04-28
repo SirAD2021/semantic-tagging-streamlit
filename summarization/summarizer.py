@@ -3,7 +3,7 @@ from transformers import pipeline
 summarizer_pipeline = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def generate_summary(text, min_length=150, max_length=300):
-    chunk_size = 4000  # characters, safe for BART
+    chunk_size = 4000  
 
     if len(text) <= chunk_size:
         summary = summarizer_pipeline(

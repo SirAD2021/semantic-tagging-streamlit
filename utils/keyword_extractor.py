@@ -1,12 +1,5 @@
 from .nlp_utils import extract_section, get_first_and_last_five_lines
 
-# def extract_keywords(text):
-#     start_headers = ['Keywords', 'Key words', 'keyword', 'Keyword']
-#     end_headers = ['Introduction', '1.', 'I.', 'Categories', '1 Introduction', 'Acknowledgements']
-#     keywords_section = extract_section(text, start_headers, end_headers)
-#     return keywords_section.strip()
-
-
 def extract_keywords(text):
     start_headers = ['Keywords', 'Key words', 'keyword', 'Keyword']
     end_headers = ['Introduction', '1.', 'I.', 'Categories', '1 Introduction',

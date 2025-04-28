@@ -10,6 +10,9 @@ from utils.tfidf_tagger import get_tfidf_tags, get_ngram_tfidf_tags
 from utils.toc_cleaner import remove_table_of_contents
 from summarization.summarizer import generate_summary
 from repositories.data_repository import insert_pdf_tags, update_corrected_tags, check_pdf_exists
+from repositories.data_repository import initialize_database
+
+initialize_database()
 
 # Search PDFs by tag
 def search_pdfs_by_tag(tag_keyword):
