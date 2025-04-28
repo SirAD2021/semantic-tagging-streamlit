@@ -1,18 +1,31 @@
 import streamlit as st
-import sqlite3
 from utils.pdf_extractor import extract_text_from_pdf
 from utils.abstract_extractor import extract_abstract
 from utils.introduction_extractor import extract_introduction
 from utils.conclusion_extractor import extract_conclusion
 from utils.references_extractor import extract_references
+from utils.keyword_extractor import extract_keywords
 from utils.text_chunker import get_chunks
 from utils.tfidf_tagger import get_tfidf_tags, get_ngram_tfidf_tags
+from repositories.data_repository import (
+    insert_pdf_tags,
+    update_corrected_tags,
+    check_pdf_exists,
+    delete_pdf_entry,
+    initialize_database
+)
+from utils.preliminaries_extractor import extract_preliminaries
+from utils.theorem_extractor import extract_theorem
+from utils.definition_extractor import extract_definition
 from utils.toc_cleaner import remove_table_of_contents
 from summarization.summarizer import generate_summary
-from repositories.data_repository import insert_pdf_tags, update_corrected_tags, check_pdf_exists
-from repositories.data_repository import initialize_database
+from transformers import pipeline
 
+# Initialize database at app startup
 initialize_database()
+
+# Initialize summarizer
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 # Search PDFs by tag
 def search_pdfs_by_tag(tag_keyword):
